@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    font-weight: 500;
+    font-size: 22px;
+}
+
+body {
+    display: flex; /** deixar itens alinhados no centro da tela  **/
+    justify-content: center; /** deixar itens alinhados no centro da tela  **/
+    align-items: center; /** deixar itens alinhados no centro da tela  **/
+    height: 80vh;
+    background: rgb(155, 50, 255);
+}
+
+input {
+    margin: 2px;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=text] {
+    width: calc(100% - 4px); /** deixar ocupando toda div ficando alinhado **/
+    height: 40px;
+}
+
+input[type=button] {
+    width: 100px;
+    height: 50px;
+    transition: ease 0.2s; /** efeito no hover  **/
+    cursor: pointer; /** mao do mouse  **/
+}
+
+div#calculadora {
+    box-shadow: 0 0 20px black; /** sombra **/
+}
+
+div#calculadora div {
+    display:flex;
+}
+
+div#calculadora div input:nth-child(4) {
+    background: #b4b4b4;
+}
+
+div#quarta input:nth-child(1) { 
+    background: red;
+}
+
+div#quarta input:nth-child(1), div#calculadora { 
+    border-bottom-left-radius: 20px;
+}
+
+div#quarta input:nth-child(3) {
+    background: rgb(0, 255, 0);
+}
+
+div#quarta input:nth-child(4), div#calculadora {
+    border-bottom-right-radius: 20px;
+}
+
+input[type=button]:hover {
+    filter: brightness(60%);
+}
+
+input[type=button]:active {
+    transform: scale(0.9); /** quando clicar diminuir um pouco o botao  **/
+}
+
+div#calculadora, form, div#calculadora input#visor {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
